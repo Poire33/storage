@@ -12,8 +12,8 @@ public class Writer {
         // Create a File object
         File myFile = new File(fileName);
 
-        try (FileWriter writer = new FileWriter(fileName)) {
-            writer.append("MOAR content");
+        try (FileWriter writer = new FileWriter(fileName, true)) {
+            writer.write("New content");
 
             System.out.println("Content successfully written to the file");
             writer.close();
